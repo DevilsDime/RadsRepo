@@ -192,4 +192,57 @@ function multiplyFromOneToTen(num:number): number
     return num;
 }
 multiplyFromOneToTen(baseMultiplyNumber);
-
+//Zad21--------------------------------------------------------------------------------------------
+console.log("Zad21--------------------------------------------------------------------------------------------");
+function addTwoNumber(a:number, b:number):number
+{
+    return a + b;
+}
+console.log(`The sum of 5 and 10 is ${addTwoNumber(5, 10)}`);
+//Zad22--------------------------------------------------------------------------------------------
+console.log("Zad22--------------------------------------------------------------------------------------------");
+function greetName(name:string):void
+{
+    console.log(`Hello ${name}!`);
+}
+greetName("Ada");
+//Zad23--------------------------------------------------------------------------------------------
+console.log("Zad23--------------------------------------------------------------------------------------------");
+function greetOptionalName(name?:string):void
+{
+    console.log(`Hello ${name || 'Guest'}!`);
+}
+greetOptionalName("Ava");
+greetOptionalName();
+//Zad24--------------------------------------------------------------------------------------------
+console.log("Zad24--------------------------------------------------------------------------------------------");
+function powerForNumber(base:number):number
+{
+    if(base<0)
+        {
+            throw new Error("Base number must be non-negative.");
+        }
+    else
+        {
+            let powerResult:number = 1;
+            for(let i = 1; i <=base; i++)
+                {
+                    powerResult *= i;
+                }
+            console.log(`The result of raising ${base} to the power is ${powerResult}`);
+            return powerResult;
+        }
+}
+powerForNumber(5);
+//Zad25-------------------------------------------------------------------------------------------
+console.log("Zad25--------------------------------------------------------------------------------------------");
+function sumAllArguments(...args:number[]):number
+{
+    let sum:number = 0;
+    for(let i:number = 0; i<args.length;i++)
+        {
+            sum += args[i];
+        }
+    return sum;
+}
+console.log(`The sum of all arguments is ${sumAllArguments(1, 2, 3, 4, 5)}`);
