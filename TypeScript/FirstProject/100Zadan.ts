@@ -35,3 +35,71 @@ console.log('The declared tab looks like this: ',tab);
 //Zad10-------------------------------------------------------------------------------------------
 const krotka:[number,string] = [27,"How's it going?"];
 console.log(`The declared tuple looks like this: ${krotka}`);
+//Zad11-------------------------------------------------------------------------------------------
+const personAge:number = 19;
+function isAdult(age:number):boolean
+{
+    if(personAge >= 18)
+    {
+        
+        console.log("You are an adult.");
+        return true;
+    }
+    else
+    {
+        console.log("You are a minor.");
+        return false;
+    }
+}
+isAdult(personAge);
+//Zad12-------------------------------------------------------------------------------------------
+const valForEvencheck:number = 8;
+function isEven(num:number):boolean
+{
+    if(num%2 === 0)
+        {
+            console.log(`${num} is an even number.`);
+            return true;
+        }
+    else
+        {
+            console.log(`${num} is not an even number.`);
+            return false;
+        }
+}
+isEven(valForEvencheck);
+//Zad13--------------------------------------------------------------------------------------------
+function maxOfTwo(num1:number, num2:number):number
+{
+    return num1 > num2 ? num1 : num2;
+}
+const val1:number = 10;
+const val2:number = 20;
+const maxValue:number = maxOfTwo(val1, val2);
+console.log(maxValue);
+//Zad14--------------------------------------------------------------------------------------------
+const n:number = 0
+function signType(x:number): void
+{
+    if(x > 0)
+    {
+        console.log(`${x} is a positive number.`);
+    }
+    else if(x < 0)
+    {
+        console.log(`${x} is a negative number.`);
+    }
+    else
+    {
+        console.log(`${x} is zero.`);
+    }
+}
+signType(n);
+//Zad15--------------------------------------------------------------------------------------------
+const targetValue:number = 5;
+let sumOfNumbers:number = 0;
+for(let i:number = 1; i <= targetValue; i++)
+{
+    sumOfNumbers += i;
+}
+console.log(`The sum of numbers from 1 to ${targetValue} is ${sumOfNumbers}`);
